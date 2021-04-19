@@ -6,7 +6,7 @@ import Comments from '../Comments/Comments';
 
 function PostDetails(props) {
   const { propsmessage} = props;
-  const DataCtx = useContext(DataContext);
+  const { getComments, comments } = useContext(DataContext);
   console.log(`${propsmessage} postDetails!`)
 
   const id = localStorage.getItem('id');
@@ -16,8 +16,8 @@ function PostDetails(props) {
 
 
   useEffect(() => {
-    DataCtx.getComments(id);
-  }, [id])
+    getComments(id);
+  }, [getComments, id])
 
   return (
     <div className="PostDetails">
@@ -25,7 +25,7 @@ function PostDetails(props) {
         <small>Author: {name}</small>
         <p className="PostDetails__text">{text}</p>
         <div>Comments:</div>
-        {DataCtx.comments && DataCtx.comments.map((comment) => (
+        {comments && comments.map((comment) => (
            <Comments key={shortid.generate()} email={comment.email} body={comment.body} name={comment.name}  /> 
            ))} 
     </div>

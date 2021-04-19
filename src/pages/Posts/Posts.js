@@ -1,4 +1,4 @@
-import React, {useContext, memo, useEffect} from 'react';
+import React, {useContext, memo} from 'react';
 import shortid from 'shortid';
 import {DataContext} from '../../context/DataContext';
 import Comments from '../../components/Comments/Comments';
@@ -11,9 +11,7 @@ export default memo(function Posts(props) {
   const {propsmessage} = props;
  const DataCtx = useContext(DataContext);
 
- useEffect(() => {
   console.log(`${propsmessage} Posts`);
- }, [])
 
   return (
     <>

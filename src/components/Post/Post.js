@@ -1,4 +1,4 @@
-import React, {useContext, memo, useEffect} from 'react';
+import React, {useContext, memo} from 'react';
 import {DataContext} from '../../context/DataContext';
 import {Link} from 'react-router-dom';
 import './Post.css';
@@ -9,9 +9,8 @@ export default memo(function Post(props) {
   const DataCtx = useContext(DataContext);
   let authorsName = DataCtx.user.find(author => author.id === name);
 
-  useEffect(() => {
-    console.log(`${propsmessage} Post${id}`);
-   }, [])
+  console.log(`${propsmessage} Post`);
+
 
   localStorage.setItem('id', id);
   localStorage.setItem('title', title);
