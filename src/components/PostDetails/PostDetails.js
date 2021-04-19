@@ -1,10 +1,11 @@
 import './PostDetails.css';
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, memo} from 'react';
+import PropTypes from 'prop-types';
 import {DataContext} from '../../context/DataContext';
 import shortid from 'shortid';
 import Comments from '../Comments/Comments';
 
-function PostDetails(props) {
+const PostDetails = memo((props) => {
   const { propsmessage} = props;
   const { getComments, comments } = useContext(DataContext);
   console.log(`${propsmessage} postDetails!`)
@@ -17,7 +18,7 @@ function PostDetails(props) {
 
   useEffect(() => {
     getComments(id);
-  }, [getComments, id])
+  }, [id])
 
   return (
     <div className="PostDetails">
@@ -30,6 +31,10 @@ function PostDetails(props) {
            ))} 
     </div>
   );
-}
+});
 
 export default PostDetails;
+
+PostDetails.propTypes = {
+  propsmessage: PropTypes.string
+} 

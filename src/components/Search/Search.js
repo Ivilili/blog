@@ -1,9 +1,12 @@
-import React, {useContext} from 'react';
+import React, {useContext, memo} from 'react';
+import PropTypes from 'prop-types';
 import {DataContext} from '../../context/DataContext';
 import './Search.css';
 
-const  Search = (props) => {
+const Search = memo((props) => {
     const DataCtx = useContext(DataContext);
+    const { propsmessage} = props;
+    console.log(`${propsmessage} Search`);
 	return (
     <div className="Search">
         <input
@@ -15,5 +18,9 @@ const  Search = (props) => {
         /> 
     </div>
 	);
-}
+});
 export default Search;
+
+Search.propTypes = {
+    propsmessage: PropTypes.string
+  } 

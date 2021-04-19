@@ -1,7 +1,8 @@
+import {memo} from 'react';
 import PropTypes from 'prop-types';
 import './Comments.css';
 
-export default function Comments(props) {
+const Comments = memo((props) => {
     const {name, body, email, propsmessage} = props;
     console.log(`${propsmessage} Comments`);
   return (
@@ -11,7 +12,9 @@ export default function Comments(props) {
       <p className="Comments__text">{body}</p>
     </div>
   );
-}
+});
+
+export default Comments;
 
 Comments.propTypes = {
   name: PropTypes.string,

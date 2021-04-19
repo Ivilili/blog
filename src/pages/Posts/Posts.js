@@ -1,4 +1,5 @@
 import React, {useContext, memo} from 'react';
+import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import {DataContext} from '../../context/DataContext';
 import Comments from '../../components/Comments/Comments';
@@ -7,7 +8,7 @@ import Search from '../../components/Search/Search';
 
 import './Posts.css';
 
-export default memo(function Posts(props) {
+const Posts =  memo((props) => {
   const {propsmessage} = props;
  const DataCtx = useContext(DataContext);
 
@@ -15,7 +16,7 @@ export default memo(function Posts(props) {
 
   return (
     <>
-    <Search />
+    <Search propsmessage={`Hello from`} />
     <div className="Posts">
       {DataCtx.filteredPosts.map(post => (
        <div key={shortid.generate()}> 
@@ -32,4 +33,10 @@ export default memo(function Posts(props) {
       </div> 
   </>
   );
-})
+});
+
+export default Posts;
+
+Posts.propTypes = {
+  propsmessage: PropTypes.string
+} 

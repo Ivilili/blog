@@ -1,7 +1,9 @@
+import {memo} from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import './Header.css';
 
-function Header(props) {
+const Header = memo((props) => {
   const {propsmessage} = props;
   console.log(`${propsmessage} Header`);
   return (
@@ -13,6 +15,10 @@ function Header(props) {
       </nav>
     </header>
   );
-}
+});
 
 export default Header;
+
+Header.propTypes = {
+  propsmessage: PropTypes.string
+}

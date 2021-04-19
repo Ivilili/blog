@@ -1,16 +1,16 @@
 import React, {useContext, memo} from 'react';
+import PropTypes from 'prop-types';
 import {DataContext} from '../../context/DataContext';
 import {Link} from 'react-router-dom';
 import './Post.css';
 
-export default memo(function Post(props) {
+ const Post = memo((props) => {
   const {id, title, text, name, propsmessage} = props;
   console.log(`${propsmessage} Post`);
   const DataCtx = useContext(DataContext);
   let authorsName = DataCtx.user.find(author => author.id === name);
 
   console.log(`${propsmessage} Post`);
-
 
   localStorage.setItem('id', id);
   localStorage.setItem('title', title);
@@ -26,4 +26,14 @@ export default memo(function Post(props) {
         <button className="Posts__button" onClick={() => {DataCtx.getComments(id)}}>Show Comments</button>
       </div>
   );
-})
+});
+
+export default Post;
+
+Post.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string,
+  text: PropTypes.string,
+  name: PropTypes.number,
+  propsmessage: PropTypes.string
+} 
