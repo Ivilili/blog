@@ -2,7 +2,7 @@
 
 Blog is a simple, responsive app created with React, using JSONPlaceholder api  and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![Screen-Shot-2021-04-19-at-6-37-44-PM.png](https://i.postimg.cc/SsFHnxJs/Screen-Shot-2021-04-19-at-6-37-44-PM.png)](https://postimg.cc/Jyxpgm3V)
+[![Screen-Shot-2021-04-19-at-6-37-44-PM.png](https://i.postimg.cc/nrGLRLXS/Screen-Shot-2021-04-19-at-6-37-44-PM.png)](https://postimg.cc/q6g0g4X2)
 
 ## Overview
 
