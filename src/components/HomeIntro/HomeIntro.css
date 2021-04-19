@@ -1,0 +1,37 @@
+.HomeIntro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    flex: 1;
+}
+
+.HomeIntro__title {
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    font-size: 38px;
+ }
+ 
+ .HomeIntro__text {
+   padding: 0 20%;
+   color: hsla(0,0%,100%,0.88);
+   line-height: 30px;
+   margin-bottom: 2rem;
+ }
+ 
+ .HomeIntro__button {
+   color: #ffffff;
+   letter-spacing: 2px;
+   text-decoration: none;
+   border-bottom: 1px solid #ffffff;
+ }
+
+
+ .HomeIntro__button:hover {
+    color: #ffa7c4;
+    border-bottom: 1px solid #ffa7c4;
+    transition: all 200ms ease-in-out;
+  }
+ 

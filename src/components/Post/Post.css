@@ -1,0 +1,17 @@
+.Post__title {
+   font-size: 20px;
+}
+
+.Post__name {
+   color: #ffa7c4;
+}
+
+.Post__text {
+    line-height: 28px;
+}
+
+.Post__link {
+   color: #4ba9c8;
+   font-style: italic;
+   letter-spacing: 0.02em;
+}

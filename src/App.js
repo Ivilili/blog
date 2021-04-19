@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { Switch, Route } from "react-router-dom";
+import DataContextProvider from "./context/DataContextProvider";
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
+import Posts from './pages/Posts/Posts';
+import PostDetails from "./components/PostDetails/PostDetails";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DataContextProvider>
+      <Header propsmessage={`Hello from`}/>
+      <Switch>
+          <Route path="/" render={(props) => (
+    <Home {...props}  propsmessage={`Hello from`} /> )} exact/>
+          <Route path="/posts" render={(props) => (
+    <Posts {...props}  propsmessage={`Hello from`} /> )} exact/>
+          <Route path="/post/:id" render={(props) => (
+    <PostDetails {...props}  propsmessage={`Hello from`} /> )}/>
+      </Switch>
+      </DataContextProvider>
     </div>
   );
 }

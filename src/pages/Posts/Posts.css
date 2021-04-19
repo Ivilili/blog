@@ -1,0 +1,35 @@
+.Posts {
+    color: hsla(0,0%,100%,0.88);
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1.5rem;
+    text-align: left;
+    padding: 10px;
+   
+}
+
+.author {
+    color: #ffa7c4;
+}
+
+.Posts__button {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+    .Posts { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+    .Posts { grid-template-columns: repeat(3, 1fr); }
+  }

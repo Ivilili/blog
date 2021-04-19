@@ -1,0 +1,32 @@
+.PostDetails {
+   color: #ffffff;
+   margin-top: 4rem;
+   padding: 0 5%;
+}
+
+.PostDetails__title {
+   color: #ffa7c4;
+   font-size: 2.5rem;
+}
+
+.PostDetails__text {
+   margin: 3rem 0;
+}
+
+small {
+   color: #ffffff;
+   font-weight: 400;
+   letter-spacing: 0.09em;
+}
+
+@media (min-width: 600px) {
+   .PostDetails { 
+      padding: 0 10%;
+   }
+}
+
+@media (min-width: 900px) {
+   .PostDetails { 
+      padding: 0 25%;
+   }
+}

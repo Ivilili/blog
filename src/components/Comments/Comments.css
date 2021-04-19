@@ -1,0 +1,21 @@
+.Comments {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: left;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 4px 12px;
+}
+
+.Comments__text {
+    font-size: 14px;
+}
+
+.Comments__title {
+    font-size: 16px;
+}
+
+.Comments__author {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+}
